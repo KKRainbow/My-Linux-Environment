@@ -19,3 +19,12 @@ function join_str
 	echo $dst
 }
 
+install()
+{
+	local p
+	for i in $*
+	do
+		echo "正在安装"${i}
+		sudo apt-get install $i -y
+	done
+}
